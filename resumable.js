@@ -337,7 +337,7 @@
             var f = new ResumableFile($, file, uniqueIdentifier);
             $.files.push(f);
             files.push(f);
-            f.container = (typeof event != 'undefined' ? event.srcElement : null);
+            f.container = (typeof event != 'undefined' ? event.target : null);
             window.setTimeout(function(){
               $.fire('fileAdded', f, event)
             },0);
